@@ -22,7 +22,7 @@ int isPrime(int size, int num, vector<bool> is_prime) {
         }
     }
     if (answer == 0) {
-        for (int j = i + 1; j <= size; j++) {
+        for (int j = i; j <= size; j++) {
             if (is_prime[j]) {
                 count++;
                 if (count == num) answer = j;
