@@ -4,6 +4,3 @@ W =[ list(map(int, sys.stdin.readline().split())) for i in range(N)]
 W = sorted(W, key=lambda w: w[0]) #무게
 
 bag=[0]*N
-
-for i in range(N):
-    bag[W[i][0]] = W[i][1]
