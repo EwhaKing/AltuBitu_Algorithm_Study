@@ -26,17 +26,21 @@ int main(){
     }
     dp[1] = gd[1];
     dp[2] = gd[1]+gd[2];
-    dp[3] = gd[1]+gd[3];
+
     ans=dp[1];
+    if(n==2) {
+        ans = dp[2];
+        cout << ans;
+        return 0;
+    }
+    for(int i=3;i<=n;i++){
 
-    for(int i=4;i<=n;i++){
+        dp[i] = max(dp[i-2],dp[i-3]+gd[i-1]) +gd[i];
 
-            dp[i] = max(dp[i-2],dp[i-3]+gd[i-1]) +gd[i];
+        ans= max(ans,dp[i]);
 
-            ans= max(ans,dp[i]);
+    }
 
-        }
-
-    cout << ans;
+    cout << dp[n];
 
 }
