@@ -48,6 +48,7 @@ int main(void) {
     vector<int> lost;
     vector<int> reserve;
 
+    /*
     for (int i = 0; i <= n; i++) {
         int input;
         cin >> input;
@@ -58,6 +59,8 @@ int main(void) {
         cin >> input;
         reserve.push_back(input);
     }
+    
+    */
 
     cout << solution(n, lost, reserve);
 
