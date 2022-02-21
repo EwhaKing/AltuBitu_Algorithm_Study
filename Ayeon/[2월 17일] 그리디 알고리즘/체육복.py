@@ -1,8 +1,11 @@
 def solution(n, lost, reserve):
+    same=[]
     for r in reserve:
         if r in lost:
-            reserve.remove(r)
-            lost.remove(r)          
+            same.append(r)
+    for s in same:
+        reserve.remove(s)
+        lost.remove(s)
     answer = n - len(lost)  
     for r in reserve:
         if (r-1 in lost) | (r+1 in lost):
